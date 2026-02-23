@@ -1,0 +1,39 @@
+# config/config.yaml — Configuration globale du projet Chess AI
+
+# ─── Agent Principal ──────────────────────────────────────────────────
+agent:
+  mode: hybrid              # Options: minimax | rl | hybrid
+  color: white              # Couleur jouée par l'IA par défaut
+
+# ─── Minimax ──────────────────────────────────────────────────────────
+minimax:
+  depth: 4                  # Profondeur de recherche (3-5 recommandé)
+  time_limit: 5.0           # Limite de temps en secondes (null = illimité)
+  quiescence_depth: 4       # Profondeur de la quiescence search
+
+# ─── Livre d'ouvertures ───────────────────────────────────────────────
+opening_book:
+  polyglot_path: null       # Chemin vers un fichier .bin (null = livre intégré)
+  random_weight: true       # Sélection pondérée aléatoire vs meilleur coup
+  max_opening_plies: 20     # Nombre max de demi-coups d'ouverture
+
+# ─── Q-Learning ───────────────────────────────────────────────────────
+q_learning:
+  alpha: 0.3                # Taux d'apprentissage
+  gamma: 0.95               # Facteur d'actualisation
+  epsilon: 1.0              # Exploration initiale
+  epsilon_decay: 0.995      # Décroissance de epsilon par épisode
+  epsilon_min: 0.05         # Exploration résiduelle minimale
+  q_table_path: data/models/q_table.pkl
+
+# ─── Entraînement ─────────────────────────────────────────────────────
+training:
+  n_episodes: 2000          # Nombre d'épisodes de self-play
+  max_moves_per_game: 200   # Limite de coups par partie
+  verbose_every: 100        # Afficher les stats toutes les N épisodes
+  save_every: 500           # Sauvegarder la Q-table toutes les N épisodes
+
+# ─── Évaluation ───────────────────────────────────────────────────────
+benchmark:
+  n_games: 50               # Parties par paire pour le tournoi
+  depths_to_test: [2, 3, 4] # Profondeurs à comparer
