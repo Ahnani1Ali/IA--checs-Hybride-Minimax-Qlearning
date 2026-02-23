@@ -339,19 +339,5 @@ pdflatex rapport.tex  # 2e passe pour la table des matières
 
 ## Auteurs
 
-- [Prénom NOM] — [email]
-- [Prénom NOM] — [email]
+AHNANI ALI
 
-**Encadrant :** [Nom de l'encadrant]  
-**Université :** [Nom de l'université] — Master 1 IA & Data Science  
-**Année :** 2024-2025
-
----
-
-## Licence
-
-MIT License — voir [LICENSE](LICENSE)
-
----
-
-*"Chess is not about winning. It's about understanding." — (Adapté)*
