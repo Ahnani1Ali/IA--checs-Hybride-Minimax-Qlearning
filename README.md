@@ -1,5 +1,4 @@
-# ♟️ Chess AI — Projet M1
-
+# ♟️ Chess AI 
 > **Moteur d'échecs intelligent** combinant livre d'ouvertures, algorithme Minimax + Alpha-Bêta et Q-Learning par self-play.
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://python.org)
